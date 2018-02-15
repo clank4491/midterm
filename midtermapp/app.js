@@ -49,7 +49,7 @@ var weather = new ForecastIo(options);//creates an instance of forecast.io
   Create a static route to the public folder.
   This will create a route to several essential JavaScript files and CSS files required for the app.
  */
-app.set('public', path.resolve(__dirname, 'public'));
+app.use(express.static(path.join(__dirname,'public')));
 /*
   Step 4 
   Create a route to the views folder. 
